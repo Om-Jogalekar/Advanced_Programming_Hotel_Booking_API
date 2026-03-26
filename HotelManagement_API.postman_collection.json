@@ -1,0 +1,1378 @@
+{
+  "info": {
+    "_postman_id": "a641ac90-ef5e-4664-bbb8-c434c698c765",
+    "name": "HotelManagement_API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "31044309"
+  },
+  "item": [
+    {
+      "name": "Hotel Management",
+      "item": [
+        {
+          "name": "Create_Hotel_Api",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwiZW1haWwiOiJob3RlbC5tYW5hZ2VyQGV4YW1wbGUuY29tIiwicm9sZXMiOiJbSE9URUxfTUFOQUdFUl0iLCJpYXQiOjE3NzQwMDg1OTQsImV4cCI6MTc3NDA0NDU5NH0.m9gCJKrjJBhnUig1iKyfEs12Gx_nd0R6bg1KBhrXv9w",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"Easy Hotel\",\r\n    \"city\":\"Berlin\",\r\n    \"photos\":[\"https://www.berlin.de/binaries/asset/image_assets/8908761/source/1717147753/1000x500/\"],\r\n    \"amenities\":[\"wifi\",\"room service\",\"breakfast\",\"online reservation\"],\r\n    \"hotelContactInfo\":{\r\n        \"address\":\"RosenthalerStra. 09 ,12110\",\r\n        \"phoneNumber\":\"+49 1774566879\",\r\n        \"email\":\"easyhotel.service@example.com\",\r\n        \"location\":\"Rosenthaler Platz, Berlin, Germany\"\r\n    },\r\n    \"active\":true\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/admin/hotels",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "hotels"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get_All_Hotels_Api",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwiZW1haWwiOiJob3RlbC5tYW5hZ2VyQGV4YW1wbGUuY29tIiwicm9sZXMiOiJbSE9URUxfTUFOQUdFUl0iLCJpYXQiOjE3NzQwMDg1OTQsImV4cCI6MTc3NDA0NDU5NH0.m9gCJKrjJBhnUig1iKyfEs12Gx_nd0R6bg1KBhrXv9w",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/admin/hotels",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "hotels"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get_Hotel_By_Id_Api",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwiZW1haWwiOiJob3RlbC5tYW5hZ2VyQGV4YW1wbGUuY29tIiwicm9sZXMiOiJbSE9URUxfTUFOQUdFUl0iLCJpYXQiOjE3NzQwMDg1OTQsImV4cCI6MTc3NDA0NDU5NH0.m9gCJKrjJBhnUig1iKyfEs12Gx_nd0R6bg1KBhrXv9w",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/admin/hotels/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "hotels",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update_Hotel_Api",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwiZW1haWwiOiJob3RlbC5tYW5hZ2VyQGV4YW1wbGUuY29tIiwicm9sZXMiOiJbSE9URUxfTUFOQUdFUl0iLCJpYXQiOjE3NzQwMDg1OTQsImV4cCI6MTc3NDA0NDU5NH0.m9gCJKrjJBhnUig1iKyfEs12Gx_nd0R6bg1KBhrXv9w",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"H2 Hotel\",\r\n    \"city\":\"Berlin\",\r\n    \"photos\":[\"https://www.berlin.de/binaries/asset/image_assets/8908761/source/1717147753/1000x500/\" , \"2wCEAAkGBxISEBUSEhIVEBUVEBUVEBUVFQ8VFw8PFRUWFxUVFhYYHSggGBolGxUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OFxAQGi0dHR0tLS0tLS0tLSstLS0tKy0tLS0rKy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0rLSstKy0tLf\"],\r\n    \"amenities\":[\"wifi\",\"room service\",\"breakfast\",\"online reservation\"],\r\n    \"hotelContactInfo\":{\r\n        \"address\":\"AlexanderStr. 10 ,12101\",\r\n        \"phoneNumber\":\"+49 14475586987\",\r\n        \"email\":\"h2hotel.service@example.com\",\r\n        \"location\":\"Alexander Platz, Berlin, Germany\"\r\n    },\r\n    \"active\":true\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/admin/hotels/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "hotels",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Activate_hotel_Api",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwiZW1haWwiOiJob3RlbC5tYW5hZ2VyQGV4YW1wbGUuY29tIiwicm9sZXMiOiJbSE9URUxfTUFOQUdFUl0iLCJpYXQiOjE3NzQwMDg1OTQsImV4cCI6MTc3NDA0NDU5NH0.m9gCJKrjJBhnUig1iKyfEs12Gx_nd0R6bg1KBhrXv9w",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/admin/hotels/4/active",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "hotels",
+                "4",
+                "active"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete_Hotel_Api",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwiZW1haWwiOiJob3RlbC5tYW5hZ2VyQGV4YW1wbGUuY29tIiwicm9sZXMiOiJbSE9URUxfTUFOQUdFUl0iLCJpYXQiOjE3NzQwMDg1OTQsImV4cCI6MTc3NDA0NDU5NH0.m9gCJKrjJBhnUig1iKyfEs12Gx_nd0R6bg1KBhrXv9w",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/admin/hotels/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "hotels",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Room Admin manage",
+      "item": [
+        {
+          "name": "Create_Room_Api",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwiZW1haWwiOiJob3RlbC5tYW5hZ2VyQGV4YW1wbGUuY29tIiwicm9sZXMiOiJbSE9URUxfTUFOQUdFUl0iLCJpYXQiOjE3NzQwMDg1OTQsImV4cCI6MTc3NDA0NDU5NH0.m9gCJKrjJBhnUig1iKyfEs12Gx_nd0R6bg1KBhrXv9w",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\":\"Super Delux room\",\r\n    \"basePrice\":300,\r\n    \"photos\":[\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSCTdR8lgwL4s9rU6Zu54CXdEsCyHqC8v2WA&s\"],\r\n    \"amenities\":[\"wifi\",\"room service\",\"AC room\",\"TV\"],\r\n    \"totalCount\":10,\r\n    \"capacity\":4\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/admin/hotels/4/rooms",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "hotels",
+                "4",
+                "rooms"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get_All_Rooms_Api",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwiZW1haWwiOiJob3RlbC5tYW5hZ2VyQGV4YW1wbGUuY29tIiwicm9sZXMiOiJbSE9URUxfTUFOQUdFUl0iLCJpYXQiOjE3NzQwMDg1OTQsImV4cCI6MTc3NDA0NDU5NH0.m9gCJKrjJBhnUig1iKyfEs12Gx_nd0R6bg1KBhrXv9w",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/admin/hotels/1/rooms",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "hotels",
+                "1",
+                "rooms"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get_Room_By_ID_Api",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwiZW1haWwiOiJob3RlbC5tYW5hZ2VyQGV4YW1wbGUuY29tIiwicm9sZXMiOiJbSE9URUxfTUFOQUdFUl0iLCJpYXQiOjE3NzQwMDg1OTQsImV4cCI6MTc3NDA0NDU5NH0.m9gCJKrjJBhnUig1iKyfEs12Gx_nd0R6bg1KBhrXv9w",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/admin/hotels/1/rooms/4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "hotels",
+                "1",
+                "rooms",
+                "4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update_Room_Api",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwiZW1haWwiOiJob3RlbC5tYW5hZ2VyQGV4YW1wbGUuY29tIiwicm9sZXMiOiJbSE9URUxfTUFOQUdFUl0iLCJpYXQiOjE3NzQwMDg1OTQsImV4cCI6MTc3NDA0NDU5NH0.m9gCJKrjJBhnUig1iKyfEs12Gx_nd0R6bg1KBhrXv9w",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"type\":\"Delux room\",\r\n    \"basePrice\":100,\r\n    \"photos\":[\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSCTdR8lgwL4s9rU6Zu54CXdEsCyHqC8v2WA&s\",\"2wCEAAkGBxISEhUSEhMVFRUVFhgXFhUXFxUVFRUVFRUXGBUVGBUYHSggGBolHRYWITEhJykrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGi0eHSUuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKy0tLS0tLS0tLS0tLS0tLS0tLf\"],\r\n    \"amenities\":[\"wifi\",\"room service\",\"AC room\",\"TV\"],\r\n    \"totalCount\":10,\r\n    \"capacity\":2\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/admin/hotels/1/rooms/4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "hotels",
+                "1",
+                "rooms",
+                "4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete_Room_Api",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwiZW1haWwiOiJob3RlbC5tYW5hZ2VyQGV4YW1wbGUuY29tIiwicm9sZXMiOiJbSE9URUxfTUFOQUdFUl0iLCJpYXQiOjE3NzQwMDg1OTQsImV4cCI6MTc3NDA0NDU5NH0.m9gCJKrjJBhnUig1iKyfEs12Gx_nd0R6bg1KBhrXv9w",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/admin/hotels/1/rooms/5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "hotels",
+                "1",
+                "rooms",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Hotel Browse",
+      "item": [
+        {
+          "name": "Hotel browse",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"city\": \"Berlin\",\r\n  \"startDate\": \"2026-03-20\",\r\n  \"endDate\": \"2026-03-21\",\r\n  \"roomsCount\": 2,\r\n  \"page\": 0,\r\n  \"size\": 10\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/hotels/search",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "hotels",
+                "search"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get_Hotel_info",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"city\": \"Berlin\",\r\n  \"startDate\": \"2026-03-20\",\r\n  \"endDate\": \"2026-03-21\",\r\n  \"roomsCount\": 2,\r\n  \"page\": 0,\r\n  \"size\": 10\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/hotels/1/info",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "hotels",
+                "1",
+                "info"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "New_User_Registration_Api",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"teil.fox@example.com\",\r\n  \"password\": \"Welcome@100\",\r\n  \"name\": \"Teil Fox\",\r\n  \"dateOfBirth\": \"1999-07-11\",\r\n  \"gender\": \"MALE\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/auth/signup",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "signup"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "User_login_Api",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"teil.fox@example.com\",\r\n  \"password\": \"Welcome@100\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login_Admin",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"hotel.manager@example.com\",\r\n  \"password\": \"Welcome@100\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Refresh_token_Api",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"hotel.manager@example.com\",\r\n  \"password\": \"Welcome@100\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/auth/refresh",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "refresh"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "User Profile",
+      "item": [
+        {
+          "name": "Get_all_guests_Api",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwiZW1haWwiOiJob3RlbC5tYW5hZ2VyQGV4YW1wbGUuY29tIiwicm9sZXMiOiJbSE9URUxfTUFOQUdFUl0iLCJpYXQiOjE3NzM3Nzk4ODgsImV4cCI6MTc3MzgxNTg4OH0.NWMJDSg0GQrfzRfwMplov7nUK5uHVQbOvGnEEAiA9Mc",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/user/guests",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "guests"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add_new_Guest_Api",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4IiwiZW1haWwiOiJ0ZWlsLmZveEBleGFtcGxlLmNvbSIsInJvbGVzIjoiW0dVRVNUXSIsImlhdCI6MTc3Mzc4ODYyMywiZXhwIjoxNzczODI0NjIzfQ.ARgvff31CYFj5YiKOcTmRLGwE4rJB6MjQ-V7NNSDGaY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\":\"Teil Schmidth \",\r\n  \"gender\":\"MALE\",\r\n  \"age\":28\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/user/guests",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "guests"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "User_profile_api",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4IiwiZW1haWwiOiJ0ZWlsLmZveEBleGFtcGxlLmNvbSIsInJvbGVzIjoiW0dVRVNUXSIsImlhdCI6MTc3Mzc4ODYyMywiZXhwIjoxNzczODI0NjIzfQ.ARgvff31CYFj5YiKOcTmRLGwE4rJB6MjQ-V7NNSDGaY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\":\"Rene Muller\",\r\n  \"gender\":\"MALE\",\r\n  \"age\":28\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/user/profile",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "profile"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update_user_profile_Api ",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4IiwiZW1haWwiOiJ0ZWlsLmZveEBleGFtcGxlLmNvbSIsInJvbGVzIjoiW0dVRVNUXSIsImlhdCI6MTc3Mzc4ODYyMywiZXhwIjoxNzczODI0NjIzfQ.ARgvff31CYFj5YiKOcTmRLGwE4rJB6MjQ-V7NNSDGaY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"dateOfBirth\":\"2000-01-01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/user/profile",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "profile"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update_guest_Api",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwiZW1haWwiOiJob3RlbC5tYW5hZ2VyQGV4YW1wbGUuY29tIiwicm9sZXMiOiJbSE9URUxfTUFOQUdFUl0iLCJpYXQiOjE3NzQwMDg1OTQsImV4cCI6MTc3NDA0NDU5NH0.m9gCJKrjJBhnUig1iKyfEs12Gx_nd0R6bg1KBhrXv9w",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\":\"Teil Fox \",\r\n  \"gender\":\"MALE\",\r\n  \"age\":35\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/user/guests/3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "guests",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete_guest_Api",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwiZW1haWwiOiJob3RlbC5tYW5hZ2VyQGV4YW1wbGUuY29tIiwicm9sZXMiOiJbSE9URUxfTUFOQUdFUl0iLCJpYXQiOjE3NzQwMDg1OTQsImV4cCI6MTc3NDA0NDU5NH0.m9gCJKrjJBhnUig1iKyfEs12Gx_nd0R6bg1KBhrXv9w",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/user/guests/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "guests",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get_MyBookings_Api",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4IiwiZW1haWwiOiJ0ZWlsLmZveEBleGFtcGxlLmNvbSIsInJvbGVzIjoiW0dVRVNUXSIsImlhdCI6MTc3NDM0MjM0MiwiZXhwIjoxNzc0Mzc4MzQyfQ.7N8kWwCdz-Y1zXCrQHBm4N1YOnOJyDGC6qsWiuq4KmI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/user/myBookings",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "myBookings"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Admin Inventory",
+      "item": [
+        {
+          "name": "Update inventory for a room",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwiZW1haWwiOiJob3RlbC5tYW5hZ2VyQGV4YW1wbGUuY29tIiwicm9sZXMiOiJbSE9URUxfTUFOQUdFUl0iLCJpYXQiOjE3NzQzMzQ3NDQsImV4cCI6MTc3NDM3MDc0NH0.8IoB2bjr1yLSYj09yKHbf1P9SHgeEl2LZJ1U5vp4bpc",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"startDate\": \"2026-03-25\",\r\n  \"endDate\": \"2026-03-30\",\r\n  \"surgeFactor\": 1.5,\r\n  \"closed\": false\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/admin/inventory/rooms/6",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "inventory",
+                "rooms",
+                "6"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Retrieve inventory of a room",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwiZW1haWwiOiJob3RlbC5tYW5hZ2VyQGV4YW1wbGUuY29tIiwicm9sZXMiOiJbSE9URUxfTUFOQUdFUl0iLCJpYXQiOjE3NzQzMzQ3NDQsImV4cCI6MTc3NDM3MDc0NH0.8IoB2bjr1yLSYj09yKHbf1P9SHgeEl2LZJ1U5vp4bpc",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/admin/inventory/rooms/6",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "inventory",
+                "rooms",
+                "6"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Booking Flow",
+      "item": [
+        {
+          "name": "Initialize a new booking",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4IiwiZW1haWwiOiJ0ZWlsLmZveEBleGFtcGxlLmNvbSIsInJvbGVzIjoiW0dVRVNUXSIsImlhdCI6MTc3NDM0MjM0MiwiZXhwIjoxNzc0Mzc4MzQyfQ.7N8kWwCdz-Y1zXCrQHBm4N1YOnOJyDGC6qsWiuq4KmI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"hotelId\": 4,\r\n  \"roomId\": 6,\r\n  \"checkInDate\": \"2026-03-25\",\r\n  \"checkOutDate\": \"2026-03-27\",\r\n  \"roomsCount\": 1\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/bookings/init",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "bookings",
+                "init"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add a guest",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4IiwiZW1haWwiOiJ0ZWlsLmZveEBleGFtcGxlLmNvbSIsInJvbGVzIjoiW0dVRVNUXSIsImlhdCI6MTc3NDM0MjM0MiwiZXhwIjoxNzc0Mzc4MzQyfQ.7N8kWwCdz-Y1zXCrQHBm4N1YOnOJyDGC6qsWiuq4KmI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "[\r\n  {\r\n    \"name\": \"John Doe\",\r\n    \"gender\": \"MALE\",\r\n    \"age\": 28\r\n  },\r\n  {\r\n    \"name\": \"Jane Doe\",\r\n    \"gender\": \"FEMALE\",\r\n    \"age\": 25\r\n  }\r\n]\r\n\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/bookings/4/addguests",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "bookings",
+                "4",
+                "addguests"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payment",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4IiwiZW1haWwiOiJ0ZWlsLmZveEBleGFtcGxlLmNvbSIsInJvbGVzIjoiW0dVRVNUXSIsImlhdCI6MTc3NDM0MjM0MiwiZXhwIjoxNzc0Mzc4MzQyfQ.7N8kWwCdz-Y1zXCrQHBm4N1YOnOJyDGC6qsWiuq4KmI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n\r\n"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/bookings/4/payments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "bookings",
+                "4",
+                "payments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Booking status",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4IiwiZW1haWwiOiJ0ZWlsLmZveEBleGFtcGxlLmNvbSIsInJvbGVzIjoiW0dVRVNUXSIsImlhdCI6MTc3NDM0MjM0MiwiZXhwIjoxNzc0Mzc4MzQyfQ.7N8kWwCdz-Y1zXCrQHBm4N1YOnOJyDGC6qsWiuq4KmI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n\r\n"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/bookings/4/status",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "bookings",
+                "4",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Hotel Report",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwiZW1haWwiOiJob3RlbC5tYW5hZ2VyQGV4YW1wbGUuY29tIiwicm9sZXMiOiJbSE9URUxfTUFOQUdFUl0iLCJpYXQiOjE3NzQzMzQ3NDQsImV4cCI6MTc3NDM3MDc0NH0.8IoB2bjr1yLSYj09yKHbf1P9SHgeEl2LZJ1U5vp4bpc",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/admin/hotels/4/reports?startDate=2026-03-24&endDate=2026-03-28",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "hotels",
+                "4",
+                "reports"
+              ],
+              "query": [
+                {
+                  "key": "startDate",
+                  "value": "2026-03-24"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2026-03-28"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get all hotel booking to admin",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2IiwiZW1haWwiOiJob3RlbC5tYW5hZ2VyQGV4YW1wbGUuY29tIiwicm9sZXMiOiJbSE9URUxfTUFOQUdFUl0iLCJpYXQiOjE3NzQzMzQ3NDQsImV4cCI6MTc3NDM3MDc0NH0.8IoB2bjr1yLSYj09yKHbf1P9SHgeEl2LZJ1U5vp4bpc",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n\r\n"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/admin/hotels/4/bookings",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "hotels",
+                "4",
+                "bookings"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "cancel booking",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4IiwiZW1haWwiOiJ0ZWlsLmZveEBleGFtcGxlLmNvbSIsInJvbGVzIjoiW0dVRVNUXSIsImlhdCI6MTc3NDM0MjM0MiwiZXhwIjoxNzc0Mzc4MzQyfQ.7N8kWwCdz-Y1zXCrQHBm4N1YOnOJyDGC6qsWiuq4KmI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/bookings/4/cancel",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "bookings",
+                "4",
+                "cancel"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
